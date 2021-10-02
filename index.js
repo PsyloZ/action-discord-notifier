@@ -38,7 +38,7 @@ const payload = {
         icon_url: authorimage,
       },
       title: '📰 Mise a jour',
-      url: 'https://arrow-host.fr',
+      url: 'fivem://connect/play.arrowrp.fr',
       description: `**${commits.join('\n')}**`
     }
   ]
