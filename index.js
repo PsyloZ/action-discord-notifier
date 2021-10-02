@@ -30,7 +30,7 @@ const payload = {
   embeds: [
     {
       title: core.getInput('message-title') || 'Commits received',
-      description: `\n${commits.join('\n')}`
+      description: `(${compareUrl})\n${commits.join('\n')}`
     }
   ]
 }
