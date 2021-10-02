@@ -16,7 +16,6 @@ const escapeMd = (str) => str.replace(/([\[\]\\`\(\)])/g, '\\$1')
 const { payload: githubPayload } = github.context
 
 const commits = githubPayload.commits.map(i => ` - ${escapeMd(i.message)} - by ${i.author.name}`)
-const authortitel = githubPayload.commits.map(e => `author: {name: ${e.author.name}, icon_url: "https://avatars.githubusercontent.com/u/73759706?v=4", url: 'www.google.fr' }`)
 if (!commits.length) {
   return
 }
@@ -29,7 +28,6 @@ const payload = {
   content: '',
   embeds: [
     {
-      author: authortitel,
       title: core.getInput('message-title') || 'Commits received',
       description: `\n${commits.join('\n')}`
     }
