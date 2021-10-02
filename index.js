@@ -15,7 +15,7 @@ const escapeMd = (str) => str.replace(/([\[\]\\`\(\)])/g, '\\$1')
 
 const { payload: githubPayload } = github.context
 
-const commits = githubPayload.commits.map(i => `\n ${escapeMd(i.message)} \n`)
+const commits = githubPayload.commits.map(i => `${escapeMd(i.message)}`)
 console.log(githubPayload)
 
 const authorname = githubPayload.sender.login
@@ -39,7 +39,7 @@ const payload = {
       },
       title: '📰 Mise a jour',
       url: 'https://arrow-host.fr',
-      description: `🪓**${commits.join('')}**`
+      description: `\n🪓**${commits.join('\n')}**`
     }
   ]
 }
