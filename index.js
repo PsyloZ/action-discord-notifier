@@ -38,7 +38,7 @@ const payload = {
         icon_url: authorimage,
       },
       title: core.getInput('message-title') || 'Commits received',
-      description: `**\n${commits.join('\n')}**`
+      description: `**\n${commits.join('')}**\n`
     }
   ]
 }
