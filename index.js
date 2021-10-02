@@ -16,7 +16,9 @@ const escapeMd = (str) => str.replace(/([\[\]\\`\(\)])/g, '\\$1')
 const { payload: githubPayload } = github.context
 
 const commits = githubPayload.commits.map(i => ` - ${escapeMd(i.message)} - by ${i.author.name}`)
-
+console.log(githubPayload)
+console.log('----')
+console.log(githubPayload.commits)
 const authorname = githubPayload.commits.author.name
 const authorimage = `https://avatars.githubusercontent.com/u/${githubPayload.commits.author.id}`
 
