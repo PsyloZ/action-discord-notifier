@@ -39,7 +39,7 @@ const payload = {
       },
       title: '📰 Mise a jour',
       url: 'https://arrow-host.fr',
-      description: `**${commits.join('Quoi cette zone?\n')}**`
+      description: `**${commits.join('\n\n')}**`
     }
   ]
 }
