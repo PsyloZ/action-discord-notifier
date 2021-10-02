@@ -15,7 +15,7 @@ const escapeMd = (str) => str.replace(/([\[\]\\`\(\)])/g, '\\$1')
 
 const { payload: githubPayload } = github.context
 
-const commits = githubPayload.commits.map(i => ` - ${escapeMd(i.message)} - by ${i.author.name}`)
+const commits = githubPayload.commits.map(i => ` - ${escapeMd(i.message)}`)
 console.log(githubPayload)
 
 const authorname = githubPayload.sender.login
@@ -24,10 +24,9 @@ const authorimage = githubPayload.sender.avatar_url
 if (!commits.length) {
   return
 }
-
+console.log(githubPayload)
 const beforeSha = githubPayload.before
 const afterSha = githubPayload.after
-const compareUrl = `${githubPayload.repository.url}/compare/${beforeSha}...${afterSha}`
 
 const payload = {
   content: '',
@@ -38,7 +37,7 @@ const payload = {
         icon_url: authorimage,
       },
       title: core.getInput('message-title') || 'Commits received',
-      description: `\n${commits.join('\n')}`
+      description: `**\n${commits.join('\n')}**`
     }
   ]
 }
