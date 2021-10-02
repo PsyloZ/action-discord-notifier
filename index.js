@@ -30,7 +30,7 @@ const payload = {
   embeds: [
     {
       title: core.getInput('message-title') || 'Commits received',
-      description: `[\`\[${shortSha(beforeSha)}...${shortSha(afterSha)}\]\`](${compareUrl})\n${commits.join('\n')}`
+      description: `\n${commits.join('\n')}`
     }
   ]
 }
