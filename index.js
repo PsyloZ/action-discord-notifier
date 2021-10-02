@@ -17,6 +17,9 @@ const { payload: githubPayload } = github.context
 
 const commits = githubPayload.commits.map(i => ` - ${escapeMd(i.message)} - by ${i.author.name}`)
 
+const authorname = githubPayload.commits.author.name
+const authorimage = `https://avatars.githubusercontent.com/u/${githubPayload.commits.author.id}`
+
 if (!commits.length) {
   return
 }
@@ -28,8 +31,11 @@ const compareUrl = `${githubPayload.repository.url}/compare/${beforeSha}...${aft
 const payload = {
   content: '',
   embeds: [
-    
     {
+      author: {
+        name: authorname,
+        icon_url: authorimage,
+      },
       title: core.getInput('message-title') || 'Commits received',
       description: `\n${commits.join('\n')}`
     }
