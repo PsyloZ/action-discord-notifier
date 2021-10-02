@@ -32,6 +32,7 @@ const payload = {
   content: '',
   embeds: [
     {
+      color: 0xDB9834,
       author: {
         name: authorname,
         icon_url: authorimage,
