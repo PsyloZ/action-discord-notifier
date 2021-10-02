@@ -15,7 +15,8 @@ const escapeMd = (str) => str.replace(/([\[\]\\`\(\)])/g, '\\$1')
 
 const { payload: githubPayload } = github.context
 
-const commits = githubPayload.commits.map(i => ` - ${escapeMd(i.message)} - by ${i.author.name}`)
+const commits = githubPayload.commits.map(i => ` - [\`[${shortSha(i.id)}]\`](${i.url}) ${escapeMd(i.message)} - by ${i.author.name}`)
+
 if (!commits.length) {
   return
 }
@@ -29,7 +30,7 @@ const payload = {
   embeds: [
     {
       title: core.getInput('message-title') || 'Commits received',
-      description: `\n${commits.join('\n')}`
+      description: `[\`\[${shortSha(beforeSha)}...${shortSha(afterSha)}\]\`](${compareUrl})\n${commits.join('\n')}`
     }
   ]
 }
