@@ -15,7 +15,7 @@ const escapeMd = (str) => str.replace(/([\[\]\\`\(\)])/g, '\\$1')
 
 const { payload: githubPayload } = github.context
 
-const commits = githubPayload.commits.map(i => `\n🪓 ${escapeMd(i.message)}`)
+const commits = githubPayload.commits.map(i => ````\n🪓 ${escapeMd(i.message)}````)
 console.log(githubPayload)
 
 const authorname = githubPayload.sender.login
@@ -39,7 +39,12 @@ const payload = {
       },
       title: '📰 Mise a jour',
       url: 'https://fivem.net',
-      description: `**${commits.join('\n')}**`
+      description: `**${commits.join('\n')}**`,
+      timestamp: new Date(),
+      footer: {
+        text: 'Merci.',
+        icon_url: 'https://static.wixstatic.com/media/c8c0d3_6ead319372dd46e3acdfa4a79c0dd2fb~mv2.gif',
+      },
     }
   ]
 }
