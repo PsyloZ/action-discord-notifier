@@ -41,9 +41,8 @@ const payload = {
       url: 'https://fivem.net',
       description: `**${commits.join('\n')}**`,
       timestamp: new Date(),
-      footer: {
-        text: 'Merci.',
-        icon_url: 'https://static.wixstatic.com/media/c8c0d3_6ead319372dd46e3acdfa4a79c0dd2fb~mv2.gif',
+      image: {
+        url: 'https://static.wixstatic.com/media/c8c0d3_6ead319372dd46e3acdfa4a79c0dd2fb~mv2.gif',
       },
     }
   ]
