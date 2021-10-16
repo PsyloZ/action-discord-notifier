@@ -41,6 +41,10 @@ const payload = {
       url: 'https://fivem.net',
       description: `**${commits.join('\n')}**`,
       timestamp: new Date(),
+      footer: {
+        text: `Version du serveur : ${afterSha}`
+        icon_url: 'https://cdn.discordapp.com/attachments/854833436916711494/898941236222771250/LOGO.png',
+      },
       image: {
         url: 'https://static.wixstatic.com/media/c8c0d3_6ead319372dd46e3acdfa4a79c0dd2fb~mv2.gif',
       },
