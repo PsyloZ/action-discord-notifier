@@ -46,7 +46,7 @@ const payload = {
         icon_url: 'https://cdn.discordapp.com/attachments/854833436916711494/898941236222771250/LOGO.png',
       },
       image: {
-        url: 'https://cdn.discordapp.com/attachments/854833436916711494/899032407221612605/Animation.gif',
+        url: 'https://cdn.discordapp.com/attachments/891083920857264189/899033608675811389/Animation.gif',
       },
     }
   ]
