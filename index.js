@@ -42,7 +42,7 @@ const payload = {
       description: `**${commits.join('\n')}**`,
       timestamp: new Date(),
       footer: {
-        text: `Version du serveur : ${shortSha(afterSha)}`,
+        text: `Build serveur: ${shortSha(afterSha)}`,
         icon_url: 'https://cdn.discordapp.com/attachments/854833436916711494/898941236222771250/LOGO.png',
       },
       image: {
