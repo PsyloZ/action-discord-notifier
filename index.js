@@ -9,7 +9,7 @@ if (!/https:\/\/discord(app|)\.com\/api\/webhooks\/\d+?\/.+/i.exec(webhook)) {
   core.setFailed('The given discord webhook url is invalid. Please ensure you give a **full** url that start with "https://discordapp.com/api/webhooks"')
 }
 
-const shortSha = (i) => i.substr(0, 6)
+const shortSha = (i) => i.substr(0, 7)
 
 const escapeMd = (str) => str.replace(/([\[\]\\`\(\)])/g, '\\$1')
 
