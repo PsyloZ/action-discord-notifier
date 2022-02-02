@@ -43,10 +43,10 @@ const payload = {
       timestamp: new Date(),
       footer: {
         text: `Build serveur: ${shortSha(afterSha)}`,
-        icon_url: 'https://cdn.discordapp.com/attachments/854833436916711494/898941236222771250/LOGO.png',
+        icon_url: 'https://cdn.libertyv.gg/u/Onid/YUzoZv.png',
       },
       image: {
-        url: 'https://cdn.discordapp.com/attachments/902102202695446538/931883022637228052/banniere_MAJ.gif',
+        url: 'https://cdn.libertyv.gg/u/Onid/870tL5.gif',
       },
     }
   ]
