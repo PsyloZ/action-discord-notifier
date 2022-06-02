@@ -38,7 +38,7 @@ const payload = {
         icon_url: authorimage,
       },
       title: '📰 Mise a jour',
-      url: 'https://fivem.net',
+      url: 'https://forum.libertyv.gg',
       description: `**${commits.join('\n')}**`,
       timestamp: new Date(),
       footer: {
