@@ -15,7 +15,12 @@ const escapeMd = (str) => str.replace(/([\[\]\\`\(\)])/g, '\\$1')
 
 const { payload: githubPayload } = github.context
 
-const commits = githubPayload.commits.map(i => `\n🪓 ${escapeMd(i.message)}`)
+//const commits = githubPayload.commits.map(i => `\n🪓 ${escapeMd(i.message)}`)
+
+const commits = githubPayload.commits
+  .filter(commit => !commit.message.includes("--nopost")) // Filter out commits containing "--nopost"
+  .map(commit => `\n🪓 ${escapeMd(commit.message)}`);
+
 console.log(githubPayload)
 
 const authorname = githubPayload.sender.login
