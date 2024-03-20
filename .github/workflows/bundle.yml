@@ -5,7 +5,7 @@ on:
 
 jobs:
   build_and_push:
-    runs-on: ubuntu-18.04
+    runs-on: self-hosted
 
     steps:
     - name: Setup node.js
