@@ -5,7 +5,7 @@ on:
 
 jobs:
   build_and_push:
-    runs-on: self-hosted
+    runs-on: push
 
     steps:
     - name: Setup node.js
