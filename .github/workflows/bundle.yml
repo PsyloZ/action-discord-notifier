@@ -5,7 +5,7 @@ on:
 
 jobs:
   build_and_push:
-    runs-on: push
+    runs-on: ubuntu-latest
 
     steps:
     - name: Setup node.js
