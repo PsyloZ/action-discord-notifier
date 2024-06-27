@@ -51,7 +51,7 @@ const payload = {
         icon_url: 'https://cdn.libertyv.gg/u/Onid/YUzoZv.png',
       },
       image: {
-        url: 'https://cdn.libv.life/901037580282363914/banniere%20MAJ.gif.gif',
+        url: 'https://cdn.psyloz.tv/901037580282363914/banniere%20MAJ.gif.gif',
       },
     }
   ]
